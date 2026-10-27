@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMovies - Movie Ticket Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101018;
+      color: white;
+    }
+    header {
+      background: #1c1c28;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 { color: #ff375f; margin: 0; }
+    .hero { padding: 45px 7%; }
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 7% 40px;
+    }
+    .movie {
+      background: #222231;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .poster {
+      height: 150px;
+      background: #39394b;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 48px;
+    }
+    button {
+      background: #ff375f;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #e6244d; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IMovies</h1>
+    <span>Movie Tickets Made Simple</span>
+  </header>
+
+  <section class="hero">
+    <h2>Discover Your Next Movie</h2>
+    <p>Choose a movie and book your seats!</p>
+  </section>
+
+  <section class="movies">
+    <div class="movie">
+      <div class="poster">🎬</div>
+      <h3>Avengers</h3>
+      <p>Action | 2h 20m</p>
+      <button onclick="book('Avengers')">Book Tickets</button>
+    </div>
+    <div class="movie">
+      <div class="poster">🍿</div>
+      <h3>Inception</h3>
+      <p>Sci-Fi | 2h 28m</p>
+      <button onclick="book('Inception')">Book Tickets</button>
+    </div>
+    <div class="movie">
+      <div class="poster">⭐</div>
+      <h3>Interstellar</h3>
+      <p>Sci-Fi | 2h 49m</p>
+      <button onclick="book('Interstellar')">Book Tickets</button>
+    </div>
+  </section>
+
+  <script>
+    function book(movie) {
+      alert("You selected " + movie +
+        ". Seat booking will be added next!");
+    }
+  </script>
+</body>
+</html>
